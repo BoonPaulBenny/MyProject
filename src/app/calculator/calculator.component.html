@@ -1,0 +1,20 @@
+<div style="background-color: lightcyan; position: absolute;
+            left: 30%; height:30%; width:40%; height:400px">
+
+    <div *ngIf="operator=='' ">
+        <input type="text" value={{value1}}> <br>
+    </div>
+    <div *ngIf="operator!=='' ">
+     <input type="text" value={{value2}}> <br> 
+    </div> 
+    <!-- <button (click)="add()"> + </button> -->
+    <div *ngIf="eq_opr!=='' ">
+    Result <input type="text" value={{result}}>  <br>
+    </div>
+
+    <button *ngFor="let num of ['0', '1', '2', '3']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
+    <button *ngFor="let num of ['4','5','6','7']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
+    <button *ngFor="let num of ['8','9']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
+    <button *ngFor="let opr of ['+', '-', '*', '/','=','clr']" (click)="setOpr(opr)" class="btn btn-outline-info">{{opr}}</button>
+
+</div>
