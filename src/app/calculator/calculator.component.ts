@@ -11,7 +11,7 @@ export class CalculatorComponent implements OnInit {
   result : number = 0
   operator = ""
   eq_opr = ""
-  clrButon : boolean = true
+  clrButon : boolean = true;
   
   constructor() { }
 

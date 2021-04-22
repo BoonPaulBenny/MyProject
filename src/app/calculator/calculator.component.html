@@ -1,9 +1,10 @@
 <div style="background-color: rgb(205, 255, 255); position: absolute;
-            left: 30%; height:30%; width:40%; height:300px">
+            left: 30%; height:30%; width:40%; height:350px">
 
+    <h3>Calculator</h3> <br>
     <div *ngIf="operator=='' || clrButon == false">
     Value 1 <input type="text" value={{value1}}> <br>
-    </div>
+    </div >
     <div *ngIf="operator!=='' &&  eq_opr==''  ">
     Value 2 <input type="text" value={{value2}}> <br> 
     </div> 
@@ -12,6 +13,8 @@
     Result <input type="text" value={{result}}>  <br>
     </div>
 
+    <br>
+    
     <button *ngFor="let num of ['0', '1', '2', '3']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
     <button *ngFor="let num of ['4','5','6','7']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
     <button *ngFor="let num of ['8','9']" (click)="setValue(num)" class="btn btn-outline-info">{{num}}</button>  <br>
