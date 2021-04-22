@@ -1,0 +1,57 @@
+<p>registration works!</p>  <br><br>
+
+<h3>Template Form</h3>                    <!--     april 17    -->
+<form #myform="ngForm">
+
+    <div class="form-group">                        
+        <label for="">Firstname</label>
+    </div>
+    <div >
+        <input required type="text"  class="form-control" #fname="ngModel" [(ngModel)]="studentModel.firstname" name="firstname">
+    
+        <div [hidden]="fname.valid || fname.untouched" class="alert alert-danger">
+            firstname is required
+        </div>
+
+    </div>
+    
+    <div class="form-group">
+        <label for="">LastName</label>
+    </div>
+    <div >
+        <input required type="text" class="form-control" #lname="ngModel" [(ngModel)]="studentModel.lastname" name="lastname">
+    
+        <div [hidden]="lname.valid || lname.untouched" class="alert alert-danger">
+            lastname is required
+        </div>
+
+    </div>
+    
+    <div class="form-group">
+        <label for="">Email</label>
+    </div>
+    <div>
+        <input required type="email" class="form-control" #email="ngModel" [(ngModel)]="studentModel.email" name="email">
+    
+        <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
+            email is required
+        </div>
+    
+    </div>
+
+    <div class="form-group">
+        <label for="">Password</label>
+    </div>
+    <div>
+        <input required type="password" class="form-control" #pswd="ngModel" [(ngModel)]="studentModel.password" name="password">
+    
+        <div [hidden]="pswd.valid || pswd.untouched" class="alert alert-danger">
+            pssword is required
+        </div>
+    
+    </div>
+
+    <button [disabled]="myform.invalid" type="submit" class="btn btn-success" (click)="save()">Save</button>
+    
+</form>
+{{myform.status}}

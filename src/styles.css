@@ -1,4 +1,13 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+.blueDisabled{
+    color:lightgreen;
+    font-size: 20px;
+}
+
+.blueEnabled{
+    color: green;
+    font: size 30px;
+}

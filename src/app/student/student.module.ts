@@ -1,0 +1,16 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RegistrationComponent } from './registration/registration.component';
+import {FormsModule} from '@angular/forms'
+
+
+
+@NgModule({
+  declarations: [RegistrationComponent],
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
+  exports: [RegistrationComponent]      // expoerted to access RegistrationComponent outside student module
+})
+export class StudentModule { }

@@ -1,4 +1,7 @@
+import { Ishapes } from './ishapes';
 import { Component } from '@angular/core';
+import {faAmbulance, faAward} from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  amb:any=faAmbulance
+  award:any = faAward
+
+  myColor:string ="blue"
+
+  Condition:boolean=true
+
   title = 'hello-world';
 
   myArray:string[] = ['boon','paul','benny']
@@ -23,4 +34,15 @@ export class AppComponent {
     let data = event.target.value
     console.log(data)
   }
+
+  setColor(event:any){
+    this.myColor=event.target.value
+  }
+
+  myStyle:any = {'color':'green','font-size':'30px'}
 }
+
+// Canvas 👇
+
+
+

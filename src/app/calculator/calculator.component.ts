@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   value1 : string=""
   value2 : string=""
-  result : number =0
+  result : number = 0
   operator = ""
   eq_opr = ""
+  clrButon : boolean = true
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -29,7 +31,7 @@ export class CalculatorComponent implements OnInit {
   // }
 
   setValue(num:string){
-    this.operator==""? this.value1 = num : this.value2 = num
+    this.operator==""? this.value1 += num : this.value2 += num
     
   }
 
@@ -53,7 +55,17 @@ export class CalculatorComponent implements OnInit {
     else{
       this.operator = opr
     }
-    
-  }
+   
+    }
+
+    setClr(){
+       this.value1 = ""
+       this.value2 = ""
+       this.result = 0
+       this.operator = ""
+       this.eq_opr = ""
+       this.clrButon = false
+    }
+
 
 }

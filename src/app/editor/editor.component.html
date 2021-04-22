@@ -1,0 +1,54 @@
+<p>editor works!</p> <br><br>
+
+<!-- april 17,19 -->
+
+<h3>Reactive Form</h3>                          
+
+<form [formGroup]="myform" (ngSubmit)="save()">
+    <div class="form-group">
+        <label for="">Firstname</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" name="firstname" formControlName="firstname" >
+    </div>
+
+    <div class="form-group">
+        <label for="">Lastname</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" name="lastname" formControlName="lastname">
+    </div>
+
+    <div class="form-group">
+        <label for="">Email</label>
+    </div>
+    <div>
+        <input type="email" class="form-control" name="email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+        <label for="">Password</label>
+    </div>
+    <div>
+        <input type="password" class="form-control" name="password" formControlName="password">
+    </div>
+    <div formGroupName="address">        <!-- here it is "formGroupName" because house & district are sub parts -->
+        <div class="form-group">
+            <label for="">House</label>
+        </div>
+        <div>
+            <input class="form-control" type="text" formControlName="house">
+        </div>
+        <div class="form-group">
+            <label for="">District</label>
+        </div>
+        <div>
+            <input class="form-control" type="text" formControlName="dist">
+        </div>
+    </div>
+
+    <button class="btn btn-success" type="submit">Save</button>
+    
+
+</form>
+

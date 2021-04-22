@@ -1,0 +1,28 @@
+
+<!-- april 19 -->
+
+<br><br>
+<h3>Form Builders</h3>
+
+<form [formGroup]="productForm" (ngSubmit)="add()">
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Product ID" formControlName="pid" >
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" formControlName="name">
+    </div>
+</div> <br>
+<div class="row">
+    <input type="text" class="form-control" placeholder="Price" formControlName="price">
+</div>
+<br>
+<div class="row">
+    <input type="text" class="form-control" placeholder="Description" formControlName="description">
+</div>
+
+<div>
+    <input type="submit" value="Add" class="btn btn-primary">
+</div>
+</form>
+{{productForm.status}}
